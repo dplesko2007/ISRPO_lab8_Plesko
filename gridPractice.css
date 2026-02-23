@@ -1,4 +1,4 @@
-.simple-grid {
+/* .simple-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
@@ -65,4 +65,59 @@
 }
 .gallery-item:hover {
     transform: scale(1.05);
+} */
+.container {
+    display: grid;
+    grid-template-areas: "header header header" "sidebar main widgets" "footer footer footer";
+    grid-template-columns: 200px 1fr 300px;
+    grid-template-rows: 80px 1fr 60px;
+    min-height: 600px;
+    gap: 15px;
+}
+.header-hw {
+    grid-area: header;
+    background-color: #a413ff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.sidebar-hw {
+    grid-area: sidebar;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+}
+.main-hw {
+    grid-area: main;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+}
+.footer-hw {
+    grid-area: footer;
+    background-color: #a413ff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.widgets {
+    grid-area: widgets;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.widget1, .widget2 {
+    background-color: #2196f3;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    border-radius: 5px;
+    height: 200px;
+    display: flex;
 }
